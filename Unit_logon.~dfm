@@ -1,11 +1,11 @@
 object Form_logon: TForm_logon
-  Left = 192
-  Top = 157
+  Left = 500
+  Top = 211
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Logon'
-  ClientHeight = 509
-  ClientWidth = 1036
+  ClientHeight = 314
+  ClientWidth = 468
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -17,44 +17,44 @@ object Form_logon: TForm_logon
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 392
-    Top = 216
+    Left = 200
+    Top = 120
     Width = 36
     Height = 13
     Caption = 'Senha'
   end
   object Label2: TLabel
-    Left = 392
-    Top = 168
+    Left = 200
+    Top = 72
     Width = 43
     Height = 13
     Caption = 'Usu'#225'rio'
   end
   object edt_usuario: TEdit
-    Left = 392
-    Top = 184
+    Left = 200
+    Top = 88
     Width = 121
     Height = 21
     TabOrder = 0
   end
   object edt_senha: TEdit
-    Left = 392
-    Top = 232
+    Left = 200
+    Top = 136
     Width = 121
     Height = 21
     TabOrder = 1
   end
   object btn_ok: TBitBtn
-    Left = 368
-    Top = 272
+    Left = 184
+    Top = 176
     Width = 75
     Height = 25
     TabOrder = 2
     Kind = bkOK
   end
   object btn_fechar: TBitBtn
-    Left = 456
-    Top = 272
+    Left = 264
+    Top = 176
     Width = 75
     Height = 25
     TabOrder = 3

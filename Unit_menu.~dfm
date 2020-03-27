@@ -1,0 +1,19 @@
+object Form_menu: TForm_menu
+  Left = 509
+  Top = 279
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Menu - Gerenciador de Cursos'
+  ClientHeight = 235
+  ClientWidth = 325
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Verdana'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+end
