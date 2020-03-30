@@ -14,6 +14,7 @@ object Form_menu: TForm_menu
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object btn_cadcursos: TBitBtn
@@ -103,5 +104,11 @@ object Form_menu: TForm_menu
     Height = 25
     TabOrder = 10
     Kind = bkClose
+  end
+  object adoquery_aux: TADOQuery
+    Connection = Form_logon.ConexaoBD
+    Parameters = <>
+    Left = 8
+    Top = 264
   end
 end

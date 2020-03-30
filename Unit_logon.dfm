@@ -35,6 +35,7 @@ object Form_logon: TForm_logon
     Top = 32
     Width = 121
     Height = 21
+    MaxLength = 30
     TabOrder = 0
   end
   object edt_senha: TEdit
@@ -42,6 +43,8 @@ object Form_logon: TForm_logon
     Top = 80
     Width = 121
     Height = 21
+    MaxLength = 10
+    PasswordChar = '*'
     TabOrder = 1
   end
   object btn_ok: TBitBtn
@@ -50,6 +53,7 @@ object Form_logon: TForm_logon
     Width = 75
     Height = 25
     TabOrder = 2
+    OnClick = btn_okClick
     Kind = bkOK
   end
   object btn_fechar: TBitBtn
@@ -57,7 +61,19 @@ object Form_logon: TForm_logon
     Top = 120
     Width = 75
     Height = 25
+    Caption = 'Fechar'
     TabOrder = 3
+    OnClick = btn_fecharClick
     Kind = bkCancel
+  end
+  object ConexaoBD: TADOConnection
+    LoginPrompt = False
+    Left = 160
+  end
+  object adoquery_aux: TADOQuery
+    Connection = ConexaoBD
+    Parameters = <>
+    Left = 160
+    Top = 32
   end
 end

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons;
+  Dialogs, StdCtrls, Buttons, DB, ADODB;
 
 type
   TForm_menu = class(TForm)
@@ -19,10 +19,13 @@ type
     btn_relatorios: TBitBtn;
     btn_controle: TBitBtn;
     btn_fechar: TBitBtn;
+    adoquery_aux: TADOQuery;
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+    procedure permissoes;
   end;
 
 var
@@ -30,6 +33,75 @@ var
 
 implementation
 
+uses Unit_logon;
+
 {$R *.dfm}
+
+{ TForm_menu }
+
+procedure TForm_menu.permissoes;
+begin
+adoquery_aux.SQL.Text:='SELECT COD_FUNCAO FROM PERMISSOES ' +
+                        'WHERE USUARIO = ' + QuotedStr(Form_logon.usuario_logado);
+adoquery_aux.Open;
+
+if adoquery_aux.Locate('COD_FUNCAO','CADCUR',[loCaseInsensitive]) then
+  btn_cadcursos.Enabled:=true
+else
+  btn_cadcursos.Enabled:=false;
+
+if adoquery_aux.Locate('COD_FUNCAO','CADINS',[loCaseInsensitive]) then
+  btn_cadinstrutores.Enabled:=true
+else
+  btn_cadinstrutores.Enabled:=false;
+
+if adoquery_aux.Locate('COD_FUNCAO','CADTUR',[loCaseInsensitive]) then
+  btn_cadturmas.Enabled:=true
+else
+  btn_cadturmas.Enabled:=false;
+
+if adoquery_aux.Locate('COD_FUNCAO','CADALU',[loCaseInsensitive]) then
+  btn_cadalunos.Enabled:=true
+else
+  btn_cadalunos.Enabled:=false;
+
+if adoquery_aux.Locate('COD_FUNCAO','CADMAT',[loCaseInsensitive]) then
+  btn_matriculas.Enabled:=true
+else
+  btn_matriculas.Enabled:=false;
+
+if adoquery_aux.Locate('COD_FUNCAO','LANAUL',[loCaseInsensitive]) then
+  btn_aulas.Enabled:=true
+else
+  btn_aulas.Enabled:=false;
+
+if adoquery_aux.Locate('COD_FUNCAO','LANFRE',[loCaseInsensitive]) then
+  btn_frequencias.Enabled:=true
+else
+  btn_frequencias.Enabled:=false;
+
+if adoquery_aux.Locate('COD_FUNCAO','PAGINS',[loCaseInsensitive]) then
+  btn_paginstrutores.Enabled:=true
+else
+  btn_paginstrutores.Enabled:=false;
+
+if adoquery_aux.Locate('COD_FUNCAO','RELATO',[loCaseInsensitive]) then
+  btn_relatorios.Enabled:=true
+else
+  btn_relatorios.Enabled:=false;
+
+if adoquery_aux.Locate('COD_FUNCAO','CONTRO',[loCaseInsensitive]) then
+  btn_controle.Enabled:=true
+else
+  btn_controle.Enabled:=false;
+
+  adoquery_aux.Close;
+
+end;
+
+procedure TForm_menu.FormShow(Sender: TObject);
+begin
+  permissoes;
+end;
 
 end.
