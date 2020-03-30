@@ -114,6 +114,15 @@ object Form_usuarios: TForm_usuarios
     PasswordChar = '*'
     TabOrder = 8
   end
+  object btn_localizar: TButton
+    Left = 216
+    Top = 32
+    Width = 75
+    Height = 21
+    Caption = 'Localizar'
+    TabOrder = 9
+    OnClick = btn_localizarClick
+  end
   object adoquery_aux: TADOQuery
     Connection = Form_logon.ConexaoBD
     Parameters = <>

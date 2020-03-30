@@ -1,4 +1,4 @@
-object Forn_pesquisa: TForn_pesquisa
+object Form_pesquisa: TForm_pesquisa
   Left = 192
   Top = 157
   BorderIcons = [biSystemMenu]

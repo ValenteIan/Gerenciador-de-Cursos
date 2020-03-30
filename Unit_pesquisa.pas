@@ -7,7 +7,7 @@ uses
   Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB, ADODB;
 
 type
-  TForn_pesquisa = class(TForm)
+  TForm_pesquisa = class(TForm)
     Label1: TLabel;
     edt_nome: TEdit;
     grid_pesquisa: TDBGrid;
@@ -30,7 +30,7 @@ type
   end;
 
 var
-  Forn_pesquisa: TForn_pesquisa;
+  Form_pesquisa: TForm_pesquisa;
 
 implementation
 
@@ -38,12 +38,12 @@ uses Unit_logon;
 
 {$R *.dfm}
 
-procedure TForn_pesquisa.FormShow(Sender: TObject);
+procedure TForm_pesquisa.FormShow(Sender: TObject);
 begin
 edt_nome.Clear;
 end;
 
-procedure TForn_pesquisa.btn_pesquisarClick(Sender: TObject);
+procedure TForm_pesquisa.btn_pesquisarClick(Sender: TObject);
 begin
   if edt_nome.Text = '' then
     ShowMessage('Digite um nome na pesquisa!')
@@ -58,13 +58,13 @@ begin
 end;
 
 
-procedure TForn_pesquisa.FormCreate(Sender: TObject);
+procedure TForm_pesquisa.FormCreate(Sender: TObject);
 begin
  chave:='';
  edt_nome.Clear;
  adoquery_pesquisa.Close;
 end;
-procedure TForn_pesquisa.btn_selecionarClick(Sender: TObject);
+procedure TForm_pesquisa.btn_selecionarClick(Sender: TObject);
 begin
   if adoquery_pesquisa.Active = false then
     ShowMessage('Impossivel selecionar!')
@@ -76,7 +76,7 @@ begin
   end;
 end;
 
-procedure TForn_pesquisa.btn_cancelarClick(Sender: TObject);
+procedure TForm_pesquisa.btn_cancelarClick(Sender: TObject);
 begin
   chave := '';
   adoquery_pesquisa.Close;

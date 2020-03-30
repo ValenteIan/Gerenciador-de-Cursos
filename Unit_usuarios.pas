@@ -21,6 +21,7 @@ type
     Senha: TLabel;
     edt_senha: TEdit;
     adoquery_aux: TADOQuery;
+    btn_localizar: TButton;
     procedure btn_novoClick(Sender: TObject);
     procedure btn_salvarClick(Sender: TObject);
     procedure btn_alterarClick(Sender: TObject);
@@ -28,6 +29,7 @@ type
     procedure btn_excluirClick(Sender: TObject);
     procedure btn_fecharClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure btn_localizarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -45,7 +47,7 @@ var
 
 implementation
 
-uses Unit_logon;
+uses Unit_logon, Unit_pesquisa;
 
 {$R *.dfm}
 
@@ -272,6 +274,30 @@ begin
   limpa_campos;
   bloqueia_campos;
   desabilita_salvar(Sender);
+end;
+
+procedure TForm_usuarios.btn_localizarClick(Sender: TObject);
+var
+senha : string;
+begin
+  limpa_campos;
+  bloqueia_campos;
+  desabilita_salvar(Sender);
+
+  Form_pesquisa.sql_pesquisa:=' SELECT USUARIO, NOME FROM USUARIOS ';
+  Form_pesquisa.ShowModal;
+  if Form_pesquisa.chave <> '' then
+  begin
+    pk:= Form_pesquisa.chave;
+    adoquery_aux.SQL.Text:= ' SELECT * FROM USUARIOS '+
+                            ' WHERE USUARIO = ' + QuotedStr(pk);
+    adoquery_aux.Open;
+    edt_usuario.Text := adoquery_aux.fieldbyname('USUARIO').AsString;
+    edt_nome.Text := adoquery_aux.fieldbyname('NOME').AsString;
+    senha := adoquery_aux.fieldbyname('SENHA').AsString;
+    edt_senha.Text := Form_logon.descriptografa(senha);
+  end;
+
 end;
 
 end.
