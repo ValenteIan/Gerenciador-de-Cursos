@@ -162,10 +162,10 @@ begin
                                   ' USUARIO ='+QuotedStr(edt_usuario.Text) +
                                   ', NOME ='+ QuotedStr(edt_nome.Text) +
                                   ', SENHA ='+ QuotedStr(senha) +
-                                  ' WHERE USUARIO = ' QuotedStr(pk);
+                                  ' WHERE USUARIO = ' + QuotedStr(pk);
       Form_logon.ConexaoBD.BeginTrans;
       try
-        adoquery_aux.ExecSQL
+        adoquery_aux.ExecSQL;
         deu_erro:=false;
       except
         on E : Exception do
@@ -219,7 +219,7 @@ end;
 
 procedure TForm_usuarios.btn_excluirClick(Sender: TObject);
 var
-deu_erro:=boolean;
+deu_erro:boolean;
 
 begin
   if pk = '' then
@@ -227,7 +227,7 @@ begin
   else
     begin
       adoquery_aux.SQL.Text := ' DELETE FROM USUARIOS ' +
-                                ' WHERE USUARIO = ' QuotedStr(pk);
+                                ' WHERE USUARIO = ' + QuotedStr(pk);
       Form_logon.ConexaoBD.BeginTrans;
 
       try
