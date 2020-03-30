@@ -28,6 +28,7 @@ type
     function validacao (usuario, senha:string) : boolean;
     function criptografia (texto : string) : string;
     function descriptografa (texto : string) : string;
+    function ErroBD(msg: string; texto : string) : string;
   end;
 
 var
@@ -131,6 +132,19 @@ end;
 procedure TForm_logon.btn_fecharClick(Sender: TObject);
 begin
 Close;
+end;
+
+function TForm_logon.ErroBD(msg, texto: string): string;
+var
+posi:byte;
+begin
+  posi := Pos(texto, msg);
+  if posi <> 0 then
+    begin
+      result:='Sim';
+    end
+  else
+      result:='Não';
 end;
 
 end.

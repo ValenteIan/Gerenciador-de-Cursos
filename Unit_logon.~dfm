@@ -35,6 +35,7 @@ object Form_logon: TForm_logon
     Top = 32
     Width = 121
     Height = 21
+    MaxLength = 30
     TabOrder = 0
   end
   object edt_senha: TEdit
@@ -42,6 +43,8 @@ object Form_logon: TForm_logon
     Top = 80
     Width = 121
     Height = 21
+    MaxLength = 10
+    PasswordChar = '*'
     TabOrder = 1
   end
   object btn_ok: TBitBtn
