@@ -22,6 +22,7 @@ type
     edt_senha: TEdit;
     adoquery_aux: TADOQuery;
     btn_localizar: TButton;
+    btn_permissoes: TBitBtn;
     procedure btn_novoClick(Sender: TObject);
     procedure btn_salvarClick(Sender: TObject);
     procedure btn_alterarClick(Sender: TObject);
@@ -30,6 +31,7 @@ type
     procedure btn_fecharClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btn_localizarClick(Sender: TObject);
+    procedure btn_permissoesClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,7 +49,7 @@ var
 
 implementation
 
-uses Unit_logon, Unit_pesquisa;
+uses Unit_logon, Unit_pesquisa, Unit_permissoes;
 
 {$R *.dfm}
 
@@ -300,6 +302,18 @@ begin
 
 end;
 
+procedure TForm_usuarios.btn_permissoesClick(Sender: TObject);
+begin
+  if pk = '' then
+    ShowMessage('Usuário inválido!')
+  else
+  begin
+    bloqueia_campos;
+    desabilita_salvar(Sender);
+    Form_permissoes.usuario :=pk;
+    Form_permissoes.ShowModal;
+  end;  
+end;
 end.
 
 

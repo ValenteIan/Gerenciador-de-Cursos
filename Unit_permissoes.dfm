@@ -1,10 +1,10 @@
 object Form_permissoes: TForm_permissoes
-  Left = 192
-  Top = 157
+  Left = 348
+  Top = 190
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Permiss'#245'es'
-  ClientHeight = 246
+  ClientHeight = 234
   ClientWidth = 290
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
@@ -48,6 +48,7 @@ object Form_permissoes: TForm_permissoes
     Height = 21
     Caption = '+'
     TabOrder = 1
+    OnClick = btn_inserirClick
   end
   object btn_retirar: TBitBtn
     Left = 248
@@ -56,6 +57,7 @@ object Form_permissoes: TForm_permissoes
     Height = 25
     Caption = '-'
     TabOrder = 2
+    OnClick = btn_retirarClick
   end
   object btn_fechar: TBitBtn
     Left = 96
@@ -64,6 +66,7 @@ object Form_permissoes: TForm_permissoes
     Height = 25
     Caption = 'Fechar'
     TabOrder = 3
+    OnClick = btn_fecharClick
   end
   object grid_permissoes: TDBGrid
     Left = 8

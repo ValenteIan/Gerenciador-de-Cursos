@@ -123,6 +123,15 @@ object Form_usuarios: TForm_usuarios
     TabOrder = 9
     OnClick = btn_localizarClick
   end
+  object btn_permissoes: TBitBtn
+    Left = 304
+    Top = 32
+    Width = 75
+    Height = 21
+    Caption = 'Permiss'#245'es'
+    TabOrder = 10
+    OnClick = btn_permissoesClick
+  end
   object adoquery_aux: TADOQuery
     Connection = Form_logon.ConexaoBD
     Parameters = <>

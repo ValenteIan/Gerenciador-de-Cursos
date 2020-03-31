@@ -21,6 +21,8 @@ type
     btn_fechar: TBitBtn;
     adoquery_aux: TADOQuery;
     procedure FormShow(Sender: TObject);
+    procedure btn_controleClick(Sender: TObject);
+    procedure btn_fecharClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -33,7 +35,7 @@ var
 
 implementation
 
-uses Unit_logon;
+uses Unit_logon, Unit_usuarios;
 
 {$R *.dfm}
 
@@ -102,6 +104,16 @@ end;
 procedure TForm_menu.FormShow(Sender: TObject);
 begin
   permissoes;
+end;
+
+procedure TForm_menu.btn_controleClick(Sender: TObject);
+begin
+Form_usuarios.ShowModal;
+end;
+
+procedure TForm_menu.btn_fecharClick(Sender: TObject);
+begin
+Application.Terminate;
 end;
 
 end.

@@ -48,7 +48,7 @@ begin
                                 ' Initial Catalog=Academico; '+
                                 ' Data Source=DESKTOP-HR2SECH\SQLEXPRESS';
   try
-    ConexaoBD.Open('sa','123');
+    ConexaoBD.Open('admin_academico','valente123');
     result:=true;
   except
     ShowMessage('Não foi possível se conectar ao servidor');

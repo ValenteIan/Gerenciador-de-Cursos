@@ -40,7 +40,7 @@ uses Unit_logon;
 
 procedure TForm_pesquisa.FormShow(Sender: TObject);
 begin
-edt_nome.Clear;
+  edt_nome.Clear;
 end;
 
 procedure TForm_pesquisa.btn_pesquisarClick(Sender: TObject);
@@ -48,11 +48,12 @@ begin
   if edt_nome.Text = '' then
     ShowMessage('Digite um nome na pesquisa!')
   else if sql_pesquisa = '' then
-    ShowMessage('Imposspivel pesquisar!')
+    ShowMessage('Impossível pesquisar!')
   else
     begin
       adoquery_pesquisa.Close;
-      adoquery_pesquisa.SQL.Text:=sql_pesquisa + ' WHERE NOME LIKE ' + QuotedStr(edt_nome.Text);
+      adoquery_pesquisa.SQL.Text:=sql_pesquisa + ' WHERE NOME LIKE ' +
+                                                  QuotedStr(edt_nome.Text);
       adoquery_pesquisa.Open;
     end;
 end;

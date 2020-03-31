@@ -37,6 +37,7 @@ object Form_pesquisa: TForm_pesquisa
     Top = 64
     Width = 425
     Height = 185
+    DataSource = ds_pesquisa
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 1
     TitleFont.Charset = ANSI_CHARSET

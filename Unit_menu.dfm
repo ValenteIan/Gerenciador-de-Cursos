@@ -96,6 +96,7 @@ object Form_menu: TForm_menu
     Height = 25
     Caption = 'Controle'
     TabOrder = 9
+    OnClick = btn_controleClick
   end
   object btn_fechar: TBitBtn
     Left = 104
@@ -103,6 +104,7 @@ object Form_menu: TForm_menu
     Width = 217
     Height = 25
     TabOrder = 10
+    OnClick = btn_fecharClick
     Kind = bkClose
   end
   object adoquery_aux: TADOQuery
