@@ -7,7 +7,8 @@ uses
   Unit_splash in 'Unit_splash.pas' {Form_splash},
   Unit_usuarios in 'Unit_usuarios.pas' {Form_usuarios},
   Unit_pesquisa in 'Unit_pesquisa.pas' {Form_pesquisa},
-  Unit_permissoes in 'Unit_permissoes.pas' {Form_permissoes};
+  Unit_permissoes in 'Unit_permissoes.pas' {Form_permissoes},
+  Unit_cursos in 'Unit_cursos.pas' {Form_cursos};
 
 {$R *.res}
 
@@ -22,6 +23,7 @@ begin
   Application.CreateForm(TForm_usuarios, Form_usuarios);
   Application.CreateForm(TForm_pesquisa, Form_pesquisa);
   Application.CreateForm(TForm_permissoes, Form_permissoes);
+  Application.CreateForm(TForm_cursos, Form_cursos);
   //Application.CreateForm(TForm_splash, Form_splash);
 
   if Form_logon.autenticacao = false then

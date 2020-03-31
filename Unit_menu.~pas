@@ -22,6 +22,7 @@ type
     adoquery_aux: TADOQuery;
     procedure FormShow(Sender: TObject);
     procedure btn_controleClick(Sender: TObject);
+    procedure btn_fecharClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -108,6 +109,11 @@ end;
 procedure TForm_menu.btn_controleClick(Sender: TObject);
 begin
 Form_usuarios.ShowModal;
+end;
+
+procedure TForm_menu.btn_fecharClick(Sender: TObject);
+begin
+Application.Terminate;
 end;
 
 end.

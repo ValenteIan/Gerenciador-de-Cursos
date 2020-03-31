@@ -24,6 +24,7 @@ object Form_menu: TForm_menu
     Height = 25
     Caption = 'Cadastro de Cursos'
     TabOrder = 0
+    OnClick = btn_cadcursosClick
   end
   object btn_cadinstrutores: TBitBtn
     Left = 216
