@@ -275,7 +275,7 @@ begin
   Form_pesquisa.ShowModal;
   if Form_pesquisa.chave <> '' then
   begin
-    pk;= Form_pesquisa.chave;
+    pk:= Form_pesquisa.chave;
     adoquery_aux.SQL.Text:= 'SELECT * FROM CURSOS '+
                             ' WHERE COD_CURSO = ' + QuotedStr(pk);
     adoquery_aux.Open;
