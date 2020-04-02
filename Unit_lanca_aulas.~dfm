@@ -1,0 +1,19 @@
+object Form_lanca_aulas: TForm_lanca_aulas
+  Left = 192
+  Top = 157
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Lan'#231'amento de aulas'
+  ClientHeight = 509
+  ClientWidth = 1036
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Verdana'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+end

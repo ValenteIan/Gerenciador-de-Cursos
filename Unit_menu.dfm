@@ -51,6 +51,7 @@ object Form_menu: TForm_menu
     Height = 25
     Caption = 'Cadastro de Alunos'
     TabOrder = 3
+    OnClick = btn_cadalunosClick
   end
   object btn_matriculas: TBitBtn
     Left = 16
@@ -59,6 +60,7 @@ object Form_menu: TForm_menu
     Height = 25
     Caption = 'Matr'#237'culas'
     TabOrder = 4
+    OnClick = btn_matriculasClick
   end
   object btn_aulas: TBitBtn
     Left = 216

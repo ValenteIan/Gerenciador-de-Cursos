@@ -119,14 +119,14 @@ begin
   for i := 1 to Form_instrutores.ComponentCount -1 do
   begin
 
-    //if (Form_instrutores.Components[i] is TEdit) then
-   // begin
-      if (Form_instrutores.Components[i] is TEdit) = true and (Form_instrutores.Components[i] as TEdit).Name <> 'edt_cod' then
+    if (Form_instrutores.Components[i] is TEdit) then
+    begin
+      if(Form_instrutores.Components[i] as TEdit).Name <> 'edt_cod' then
       begin
         (Form_instrutores.Components[i] as TEdit).Enabled := true;
         (Form_instrutores.Components[i] as TEdit).Color :=clWindow;
        end;
-    //end;
+    end;
   end;
 end;
 

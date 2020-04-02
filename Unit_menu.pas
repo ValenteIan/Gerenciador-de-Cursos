@@ -26,6 +26,8 @@ type
     procedure btn_cadcursosClick(Sender: TObject);
     procedure btn_cadinstrutoresClick(Sender: TObject);
     procedure btn_cadturmasClick(Sender: TObject);
+    procedure btn_cadalunosClick(Sender: TObject);
+    procedure btn_matriculasClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,7 +40,8 @@ var
 
 implementation
 
-uses Unit_logon, Unit_usuarios, Unit_cursos, Unit_instrutores, Unit_turmas;
+uses Unit_logon, Unit_usuarios, Unit_cursos, Unit_instrutores, Unit_turmas,
+  Unit_aluno, Unit_matriculas;
 
 {$R *.dfm}
 
@@ -132,6 +135,16 @@ end;
 procedure TForm_menu.btn_cadturmasClick(Sender: TObject);
 begin
   Form_turmas.ShowModal;
+end;
+
+procedure TForm_menu.btn_cadalunosClick(Sender: TObject);
+begin
+ Form_alunos.ShowModal;
+end;
+
+procedure TForm_menu.btn_matriculasClick(Sender: TObject);
+begin
+Form_matriculas.ShowModal;
 end;
 
 end.

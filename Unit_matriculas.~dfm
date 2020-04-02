@@ -1,11 +1,11 @@
-object Form_cursos: TForm_cursos
-  Left = 455
-  Top = 324
+object Form_matriculas: TForm_matriculas
+  Left = 342
+  Top = 229
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'Cursos'
-  ClientHeight = 138
-  ClientWidth = 457
+  Caption = 'Matr'#237'culas'
+  ClientHeight = 170
+  ClientWidth = 488
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,22 +18,22 @@ object Form_cursos: TForm_cursos
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 16
-    Top = 24
-    Width = 96
+    Left = 64
+    Top = 64
+    Width = 36
     Height = 13
-    Caption = 'C'#243'digo do Curso'
+    Caption = 'Turma'
   end
   object Label2: TLabel
-    Left = 120
-    Top = 24
-    Width = 89
+    Left = 64
+    Top = 16
+    Width = 32
     Height = 13
-    Caption = 'Nome do Curso'
+    Caption = 'Aluno'
   end
   object btn_novo: TBitBtn
-    Left = 8
-    Top = 88
+    Left = 40
+    Top = 120
     Width = 75
     Height = 25
     Caption = 'Novo'
@@ -41,8 +41,8 @@ object Form_cursos: TForm_cursos
     OnClick = btn_novoClick
   end
   object btn_salvar: TBitBtn
-    Left = 80
-    Top = 88
+    Left = 112
+    Top = 120
     Width = 75
     Height = 25
     Caption = 'Salvar'
@@ -50,8 +50,8 @@ object Form_cursos: TForm_cursos
     OnClick = btn_salvarClick
   end
   object btn_alterar: TBitBtn
-    Left = 152
-    Top = 88
+    Left = 184
+    Top = 120
     Width = 75
     Height = 25
     Caption = 'Alterar'
@@ -59,8 +59,8 @@ object Form_cursos: TForm_cursos
     OnClick = btn_alterarClick
   end
   object btn_cancelar: TBitBtn
-    Left = 224
-    Top = 88
+    Left = 256
+    Top = 120
     Width = 75
     Height = 25
     Caption = 'Cancelar'
@@ -68,8 +68,8 @@ object Form_cursos: TForm_cursos
     OnClick = btn_cancelarClick
   end
   object btn_excluir: TBitBtn
-    Left = 296
-    Top = 88
+    Left = 328
+    Top = 120
     Width = 75
     Height = 25
     Caption = 'Excluir'
@@ -77,43 +77,59 @@ object Form_cursos: TForm_cursos
     OnClick = btn_excluirClick
   end
   object btn_fechar: TBitBtn
-    Left = 368
-    Top = 88
+    Left = 400
+    Top = 120
     Width = 75
     Height = 25
     Caption = 'Fechar'
     TabOrder = 5
     OnClick = btn_fecharClick
   end
-  object edt_cod: TEdit
-    Left = 16
-    Top = 40
-    Width = 97
+  object edt_turma: TEdit
+    Left = 64
+    Top = 80
+    Width = 217
     Height = 21
-    MaxLength = 3
     TabOrder = 6
   end
-  object edt_nome: TEdit
-    Left = 120
-    Top = 40
-    Width = 241
+  object edt_aluno: TEdit
+    Left = 64
+    Top = 32
+    Width = 217
     Height = 21
-    MaxLength = 20
     TabOrder = 7
   end
+  object btn_aluno: TBitBtn
+    Left = 288
+    Top = 32
+    Width = 33
+    Height = 21
+    Caption = '+'
+    TabOrder = 8
+    OnClick = btn_alunoClick
+  end
+  object btn_turma: TBitBtn
+    Left = 288
+    Top = 80
+    Width = 33
+    Height = 21
+    Caption = '+'
+    TabOrder = 9
+    OnClick = btn_turmaClick
+  end
   object btn_localizar: TBitBtn
-    Left = 376
-    Top = 40
+    Left = 344
+    Top = 32
     Width = 75
     Height = 21
     Caption = 'Localizar'
-    TabOrder = 8
+    TabOrder = 10
     OnClick = btn_localizarClick
   end
   object adoquery_aux: TADOQuery
     Connection = Form_logon.ConexaoBD
     Parameters = <>
-    Left = 320
-    Top = 8
+    Left = 448
+    Top = 16
   end
 end

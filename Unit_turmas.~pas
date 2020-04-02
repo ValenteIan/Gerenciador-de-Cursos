@@ -451,7 +451,7 @@ begin
     pk:= Form_pesquisa_turmas.chave;
 
     sql := 'SELECT TURMAS.COD_TURMA, TURMAS.VALOR_AULA, '+
-            'CURSOS.NOME AS CURSO, CURSO.COD_CURSO, '+
+            'CURSOS.NOME AS CURSO, CURSOS.COD_CURSO, '+
             ' INSTRUTORES.NOME AS INSTRUTOR, INSTRUTORES.COD_INSTRUTOR '+
             'FROM TURMAS '+
             'INNER JOIN CURSOS '+

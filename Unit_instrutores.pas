@@ -114,7 +114,6 @@ end;
 procedure TForm_instrutores.libera_campos;
 var
 i : integer;
-nomeigual:boolean;
 begin
   for i := 1 to Form_instrutores.ComponentCount -1 do
   begin

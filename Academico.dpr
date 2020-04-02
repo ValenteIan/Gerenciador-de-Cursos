@@ -11,7 +11,10 @@ uses
   Unit_cursos in 'Unit_cursos.pas' {Form_cursos},
   Unit_instrutores in 'Unit_instrutores.pas' {Form_instrutores},
   Unit_turmas in 'Unit_turmas.pas' {Form_turmas},
-  Unit_pesquisa_turmas in 'Unit_pesquisa_turmas.pas' {Form_pesquisa_turmas};
+  Unit_pesquisa_turmas in 'Unit_pesquisa_turmas.pas' {Form_pesquisa_turmas},
+  Unit_aluno in 'Unit_aluno.pas' {Form_alunos},
+  Unit_matriculas in 'Unit_matriculas.pas' {Form_matriculas},
+  Unit_lanca_aulas in 'Unit_lanca_aulas.pas' {Form_lanca_aulas};
 
 {$R *.res}
 
@@ -30,6 +33,9 @@ begin
   Application.CreateForm(TForm_instrutores, Form_instrutores);
   Application.CreateForm(TForm_turmas, Form_turmas);
   Application.CreateForm(TForm_pesquisa_turmas, Form_pesquisa_turmas);
+  Application.CreateForm(TForm_alunos, Form_alunos);
+  Application.CreateForm(TForm_matriculas, Form_matriculas);
+  Application.CreateForm(TForm_lanca_aulas, Form_lanca_aulas);
   //Application.CreateForm(TForm_splash, Form_splash);
 
   if Form_logon.autenticacao = false then

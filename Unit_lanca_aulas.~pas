@@ -1,0 +1,24 @@
+unit Unit_lanca_aulas;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  TForm_lanca_aulas = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_lanca_aulas: TForm_lanca_aulas;
+
+implementation
+
+{$R *.dfm}
+
+end.
