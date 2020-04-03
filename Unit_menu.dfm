@@ -69,6 +69,7 @@ object Form_menu: TForm_menu
     Height = 25
     Caption = 'Lan'#231'amento de aulas'
     TabOrder = 5
+    OnClick = btn_aulasClick
   end
   object btn_frequencias: TBitBtn
     Left = 16

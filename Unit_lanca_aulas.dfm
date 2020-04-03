@@ -14,6 +14,7 @@ object Form_lanca_aulas: TForm_lanca_aulas
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -56,6 +57,7 @@ object Form_lanca_aulas: TForm_lanca_aulas
     Height = 25
     Caption = 'Lan'#231'ar'
     TabOrder = 2
+    OnClick = btn_lancarClick
   end
   object btn_cancelar: TBitBtn
     Left = 192
@@ -64,6 +66,7 @@ object Form_lanca_aulas: TForm_lanca_aulas
     Height = 25
     Caption = 'Cancelar'
     TabOrder = 3
+    OnClick = btn_cancelarClick
   end
   object btn_turma: TBitBtn
     Left = 144
@@ -72,8 +75,10 @@ object Form_lanca_aulas: TForm_lanca_aulas
     Height = 21
     Caption = '+'
     TabOrder = 4
+    OnClick = btn_turmaClick
   end
-  object ADOQuery1: TADOQuery
+  object adoquery_aux: TADOQuery
+    Connection = Form_logon.ConexaoBD
     Parameters = <>
     Left = 48
     Top = 72
