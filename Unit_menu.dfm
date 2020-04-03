@@ -78,6 +78,7 @@ object Form_menu: TForm_menu
     Height = 25
     Caption = 'Frequ'#234'ncias'
     TabOrder = 6
+    OnClick = btn_frequenciasClick
   end
   object btn_paginstrutores: TBitBtn
     Left = 216

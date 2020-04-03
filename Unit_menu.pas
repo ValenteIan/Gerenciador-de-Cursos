@@ -29,6 +29,7 @@ type
     procedure btn_cadalunosClick(Sender: TObject);
     procedure btn_matriculasClick(Sender: TObject);
     procedure btn_aulasClick(Sender: TObject);
+    procedure btn_frequenciasClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,7 +43,7 @@ var
 implementation
 
 uses Unit_logon, Unit_usuarios, Unit_cursos, Unit_instrutores, Unit_turmas,
-  Unit_aluno, Unit_matriculas, Unit_lanca_aulas;
+  Unit_aluno, Unit_matriculas, Unit_lanca_aulas, Unit_lanca_presenca;
 
 {$R *.dfm}
 
@@ -151,6 +152,11 @@ end;
 procedure TForm_menu.btn_aulasClick(Sender: TObject);
 begin
   Form_lanca_aulas.ShowModal;
+end;
+
+procedure TForm_menu.btn_frequenciasClick(Sender: TObject);
+begin
+  Form_lanca_presenca.ShowModal;
 end;
 
 end.
