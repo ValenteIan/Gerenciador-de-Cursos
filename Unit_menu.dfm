@@ -96,6 +96,7 @@ object Form_menu: TForm_menu
     Height = 25
     Caption = 'Relat'#243'rios'
     TabOrder = 8
+    OnClick = btn_relatoriosClick
   end
   object btn_controle: TBitBtn
     Left = 216

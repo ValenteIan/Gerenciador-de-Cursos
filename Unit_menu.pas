@@ -31,6 +31,7 @@ type
     procedure btn_aulasClick(Sender: TObject);
     procedure btn_frequenciasClick(Sender: TObject);
     procedure btn_paginstrutoresClick(Sender: TObject);
+    procedure btn_relatoriosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -45,7 +46,7 @@ implementation
 
 uses Unit_logon, Unit_usuarios, Unit_cursos, Unit_instrutores, Unit_turmas,
   Unit_aluno, Unit_matriculas, Unit_lanca_aulas, Unit_lanca_presenca,
-  Unit_pag_instrutores;
+  Unit_pag_instrutores, Unit_relatorios;
 
 {$R *.dfm}
 
@@ -164,6 +165,11 @@ end;
 procedure TForm_menu.btn_paginstrutoresClick(Sender: TObject);
 begin
  Form_pag_instrutores.ShowModal;
+end;
+
+procedure TForm_menu.btn_relatoriosClick(Sender: TObject);
+begin
+  Form_relatorios.ShowModal;
 end;
 
 end.

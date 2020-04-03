@@ -67,11 +67,6 @@ object Form_logon: TForm_logon
     Kind = bkCancel
   end
   object ConexaoBD: TADOConnection
-    Connected = True
-    ConnectionString = 
-      'Provider=SQLOLEDB.1;Password=valente123;Persist Security Info=Tr' +
-      'ue;User ID=admin_academico;Initial Catalog=Academico;Data Source' +
-      '=DESKTOP-HR2SECH\SQLEXPRESS'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
     Left = 160

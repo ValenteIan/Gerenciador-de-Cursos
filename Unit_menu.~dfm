@@ -87,6 +87,7 @@ object Form_menu: TForm_menu
     Height = 25
     Caption = 'Pagamento de Instrutores'
     TabOrder = 7
+    OnClick = btn_paginstrutoresClick
   end
   object btn_relatorios: TBitBtn
     Left = 16
