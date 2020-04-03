@@ -68,6 +68,7 @@ object Form_logon: TForm_logon
   end
   object ConexaoBD: TADOConnection
     LoginPrompt = False
+    Provider = 'SQLOLEDB.1'
     Left = 160
   end
   object adoquery_aux: TADOQuery

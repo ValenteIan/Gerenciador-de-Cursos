@@ -156,7 +156,7 @@ end;
 
 procedure TForm_menu.btn_frequenciasClick(Sender: TObject);
 begin
-Form_lanca_presenca.ShowModal;
+  Form_lanca_presenca.ShowModal;
 end;
 
 end.
