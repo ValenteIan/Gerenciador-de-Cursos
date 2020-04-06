@@ -19,6 +19,10 @@ type
     ds_rel_cursos: TRvDataSetConnection;
     procedure btn_rel_cursoClick(Sender: TObject);
     procedure btn_fecharClick(Sender: TObject);
+    procedure btn_rel_turmasClick(Sender: TObject);
+    procedure btn_rel_alunosClick(Sender: TObject);
+    procedure btn_rel_faltasClick(Sender: TObject);
+    procedure btn_rel_aulasClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,7 +34,7 @@ var
 
 implementation
 
-uses Unit_logon;
+uses Unit_logon, Unit_rel_turmas, Unit_rel_alunos, Unit_rel_faltas;
 
 {$R *.dfm}
 
@@ -45,6 +49,26 @@ end;
 procedure TForm_relatorios.btn_fecharClick(Sender: TObject);
 begin
 close;
+end;
+
+procedure TForm_relatorios.btn_rel_turmasClick(Sender: TObject);
+begin
+  form_rel_turmas.showmodal;
+end;
+
+procedure TForm_relatorios.btn_rel_alunosClick(Sender: TObject);
+begin
+  form_rel_alunos.showmodal;
+end;
+
+procedure TForm_relatorios.btn_rel_faltasClick(Sender: TObject);
+begin
+  form_rel_faltas.showmodal;
+end;
+
+procedure TForm_relatorios.btn_rel_aulasClick(Sender: TObject);
+begin
+  form_rel_aulas.showmodal;
 end;
 
 end.

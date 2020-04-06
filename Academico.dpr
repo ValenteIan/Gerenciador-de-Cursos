@@ -17,7 +17,11 @@ uses
   Unit_lanca_aulas in 'Unit_lanca_aulas.pas' {Form_lanca_aulas},
   Unit_lanca_presenca in 'Unit_lanca_presenca.pas' {Form_lanca_presenca},
   Unit_pag_instrutores in 'Unit_pag_instrutores.pas' {Form_pag_instrutores},
-  Unit_relatorios in 'Unit_relatorios.pas' {Form_relatorios};
+  Unit_relatorios in 'Unit_relatorios.pas' {Form_relatorios},
+  Unit_rel_turmas in 'Unit_rel_turmas.pas' {Form_rel_turmas},
+  Unit_rel_alunos in 'Unit_rel_alunos.pas' {Form_rel_alunos},
+  Unit_rel_faltas in 'Unit_rel_faltas.pas' {Form_rel_faltas},
+  Unit_rel_aulas in 'Unit_rel_aulas.pas' {Form_rel_aulas};
 
 {$R *.res}
 
@@ -42,6 +46,10 @@ begin
   Application.CreateForm(TForm_lanca_presenca, Form_lanca_presenca);
   Application.CreateForm(TForm_pag_instrutores, Form_pag_instrutores);
   Application.CreateForm(TForm_relatorios, Form_relatorios);
+  Application.CreateForm(TForm_rel_turmas, Form_rel_turmas);
+  Application.CreateForm(TForm_rel_alunos, Form_rel_alunos);
+  Application.CreateForm(TForm_rel_faltas, Form_rel_faltas);
+  Application.CreateForm(TForm_rel_aulas, Form_rel_aulas);
   //Application.CreateForm(TForm_splash, Form_splash);
 
   if Form_logon.autenticacao = false then

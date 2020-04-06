@@ -32,6 +32,7 @@ type
     procedure btn_frequenciasClick(Sender: TObject);
     procedure btn_paginstrutoresClick(Sender: TObject);
     procedure btn_relatoriosClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -170,6 +171,11 @@ end;
 procedure TForm_menu.btn_relatoriosClick(Sender: TObject);
 begin
   Form_relatorios.ShowModal;
+end;
+
+procedure TForm_menu.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+ Application.Terminate;
 end;
 
 end.

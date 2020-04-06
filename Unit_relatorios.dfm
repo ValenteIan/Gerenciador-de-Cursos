@@ -32,6 +32,7 @@ object Form_relatorios: TForm_relatorios
     Height = 25
     Caption = 'Rela'#231#227'o de Turmas por Curso'
     TabOrder = 1
+    OnClick = btn_rel_turmasClick
   end
   object btn_rel_alunos: TBitBtn
     Left = 16
@@ -40,6 +41,7 @@ object Form_relatorios: TForm_relatorios
     Height = 25
     Caption = 'Rela'#231#227'o de Alunos por Turma'
     TabOrder = 2
+    OnClick = btn_rel_alunosClick
   end
   object btn_rel_faltas: TBitBtn
     Left = 16
@@ -48,6 +50,7 @@ object Form_relatorios: TForm_relatorios
     Height = 25
     Caption = 'Relat'#243'rio de Faltas dos Alunos'
     TabOrder = 3
+    OnClick = btn_rel_faltasClick
   end
   object btn_rel_aulas: TBitBtn
     Left = 16
@@ -56,6 +59,7 @@ object Form_relatorios: TForm_relatorios
     Height = 25
     Caption = 'Relat'#243'rio de Aulas po Instrutor'
     TabOrder = 4
+    OnClick = btn_rel_aulasClick
   end
   object btn_fechar: TBitBtn
     Left = 64
